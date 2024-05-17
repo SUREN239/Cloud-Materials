@@ -1,0 +1,386 @@
+Day 1 AWS
+
+
+Cloud:
+ Services On Demand - RIP
+
+
+Cloud Providers:
+ AWS
+ AZURE
+ GCP
+
+
+Advantages of Cloud:
+
+1. Trade Capital Expense with variable Expense
+2. Stop Guessing Capacity
+3. Increased Speed 
+4. Stop Spending money on Running and maintaining the data centres
+5. Benefits from Massive Economics of Scale
+6. Go Global in s....
+
+
+Availablity Zones
+
+1. 80KMS
+2. OFC/NFC Cables
+3. 3-6 ->Region 	//singleton
+
+
+Region Selection
+
+1. Target User '''4
+2. Cost of Utilization '''3
+3. Service Avail '''2
+4. Complaints '''1
+
+
+Cloud Language
+
+1. MarkUp Languages 
+2. Alling Languages
+
+
+AWS ACCESS
+
+1. MGMT Console - Chrome
+2. CLI
+3. API 
+
+
+Edge Locations:
+
+///Content need to be added
+
+
+Types Of Cloud:
+
+1. Public Cloud
+2. Private Cloud - Own Data Centre - Cloud Platform
+3. Hybrid Cloud - Data Analytics cum Cloud
+
+
+Cloud Segments
+
+1. IaaS
+2. PaaS
+3. SaaS
+
+
+-------------------------------------------------------------
+
+
+Day 2 AWS
+
+IAM - OverView
+
+-------------------------------------------------------------
+
+Day 3 AWS
+
+S3 
+
+1. Bucket - Key Unit of S3
+2. Bucket - things stored in Bucket Object
+3. Obj Min & Max size - 1KB & 5TB - Uploadable(5GB)
+
+
+S3 UseCases
+
+1. Static Hosting
+2. Data Lake
+3. 
+
+
+S3 Storage Classes
+
+//Content Need to be added
+
+--------------------------------------------------------------
+
+Day 4 Aws
+
+
+EC2
+
+1. FireWall = Security Group
+2. HardDisk = EBS/Volume
+3. EBS Min/Max = 1GB
+4. Keys = Public + Private
+5. Virtual Machine = Instance
+6. Port Sync = 
+
+
+----------------------------------------------------------
+
+Day 5 AWS
+
+VPC
+
+1. Provides the Landing Zone
+2. Creates Virtual Boundary
+3. Before VPC - EC2 classic Network
+4.
+5.
+6.
+7.
+
+
+Rules For VPC
+
+0. /29,/28 - Subnet Range
+1. Max = /16 ; Min = /29
+2. RFC 1918
+3. Default VPC will be Available in all the regions(Atleast 1)
+4. VPC - net - Subnet
+5.
+6. 3 diff Subnet - public, private, ghost
+
+
+VPC Component
+
+1. Subnet
+2. Internet Gateway
+3. NAT - Network Address 
+
+
+*Route Table
+
+
+
+
+
+
+
+
+10.11.0.0/16
+10.11.1.0
+10.11.2.0......
+
+
+
+-------------------------------------------------------------------------
+
+
+Day 6 AWS
+
+Load Balancers
+
+Classic. Application. Network. Gateway
+
+
+
+-------------------------------------------------------------
+
+
+Day 7 , 8  AWS
+
+Auto Scaling ,  Cloud Front 
+
+//Refer AWS CONSOLE
+
+
+-----------------------------------------------------------------------
+
+Day 9
+
+Docker | Docker Container | 
+
+1. DockerHub -
+2. Ubuntu Instance 
+
+	apt-get update
+	apt-get install docker.io
+	docker pull httpd
+	docker image ls
+	docker run -t -d -p 8080:81 httpd
+	docker container ls
+
+-----------------------------------------------------------------------
+
+
+Day 10 
+
+DevOps
+
+DevOps introduction
+WaterFall model
+
+	Requirement
+	Design
+	Dev
+	Test
+	Deploy
+	operations
+
+Fall of WaterFall
+
+
+Agile Methodlogy
+	Scrum,Sprint...
+
+Advantages of Agile
+
+Superior quality product. ...
+Customer satisfaction. ...
+Better control. ...
+Improved project predictability. ...
+Reduced risks. ...
+Increased flexibility. ...
+Continuous improvement. ...
+Improved team morale.
+
+Disadvantages
+
+Less predictable. The flexibility at the core of the Agile method also means a much lower degree of predictability. ...
+More time and commitment. ...
+Greater demands on developers and clients. ...
+Lack of necessary documentation. ...
+Projects easily fall off track.
+
+
+
+Dev Ops Phases
+
+
+ planning, coding, testing, deployment, monitoring, and feedback. 
+
+Plan
+In this phase, the team collaborates with the business stakeholders to define the requirements for the project and identify the features that will be delivered.
+
+The goal is to clearly understand the needs and expectations of the stakeholders.
+
+This phase involves creating a roadmap, defining milestones, and setting project goals. An example of this phase in action could be a team using a project management tool like Jira to create a backlog of user stories and tasks.
+
+Code
+In this phase, the development team creates the code for the application. This involves using best practices to write high-quality, maintainable code that can be easily tested. 
+
+The team may use a version control system like Git to manage the codebase. An example of this phase in action could be a team using an integrated development environment (IDE) like Visual Studio Code/ Eclipse to write and debug code.
+
+Build
+In this phase, the code is compiled and built into executable binaries or packages. This phase includes tasks such as compiling code, running unit tests, and packaging the application. 
+
+An example of this phase in action could be a team using a tool like Jenkins / GitLab to automate the build process, ensuring that code changes are integrated and tested regularly
+
+Test
+In this phase, the application is tested to ensure that it meets the quality standards and requirements. This includes testing at various levels, such as unit tests, integration tests, and acceptance tests. 
+
+An example of this phase in action could be a team using a test automation tool/ platforms like TestSigma/Selenium/Playwright/Cypress to run automated tests for the web application
+
+Release
+In this phase, the application code undergoes a final check for production readiness. If all requirements are met and any identified issues are resolved, the project proceeds to the deployment phase.
+
+By conducting thorough testing, quality assurance, and preparation activities, organizations can ensure that the released application meets quality standards and is ready for end-users to utilize.   
+
+An example of this phase in action could be a team using Jenkins / Bamboo that automates the entire release process.
+
+Deploy
+In this phase, the application is deployed to the desired environment which can be stage, UAT or production environment. This involves setting up the infrastructure, configuring the environment, and deploying the application code. 
+
+An example of this phase in action could be a team using a deployment automation tool like Ansible / Chef to deploy the application across different environments.
+
+Additionally, tools like Kubernetes and Docker are used to establish Continuous deployment pipelines for containerization and orchestration
+
+Operate
+In this phase, the application is monitored and maintained in the production environment. Operations teams monitor the application’s performance, availability, and security, and respond to any incidents or issues that arise
+
+An example of this phase in action could be a team using monitoring tools like Nagios, Prometheus, and ELK stack (Elasticsearch, Logstash, Kibana) to help in monitoring and logging application metrics and logs.
+
+Monitor
+In this phase, the application is monitored and maintained in the production environment. This includes tasks such as monitoring performance, tracking user behavior, and troubleshooting issues. 
+
+Monitoring tools like Grafana, Datadog, and ELK stack (Elasticsearch, Logstash, Kibana) provide visualizations, alerts, and dashboards for proactive monitoring and troubleshooting.
+
+
+
+Best practices
+Maintainable code
+Testing
+Version control system
+Git
+IDE
+Visual Studio Code
+Eclipse
+Build
+
+Compilation
+Executable binaries
+Unit tests
+Packaging
+Jenkins
+GitLab
+Automation
+Test
+
+Quality standards
+Unit tests
+Integration tests
+Acceptance tests
+Test automation
+TestSigma
+Selenium
+Playwright
+Cypress
+Release
+
+Production readiness
+Quality assurance
+Jenkins
+Bamboo
+Deploy
+
+Staging
+UAT
+Production environment
+Infrastructure setup
+Environment configuration
+Deployment automation
+Ansible
+Chef
+Kubernetes
+Docker
+Operate
+
+Monitoring
+Performance
+Security
+Incident response
+Nagios
+Prometheus
+ELK stack
+Elasticsearch
+Logstash
+Kibana
+Monitor
+
+Performance tracking
+User behavior
+Troubleshooting
+Grafana
+Datadog
+ELK stack
+Visualizations
+Alerts
+Dashboards
+
+
+
+FROM public.ecr.aws/amazonlinux/amazonlinux:latest
+
+# Install dependencies
+RUN yum update -y && \
+ yum install -y httpd
+
+# Install apache and write hello world message
+RUN echo 'Hello World!' > /var/www/html/index.html
+
+# Configure apache
+RUN echo 'mkdir -p /var/run/httpd' >> /root/run_apache.sh && \
+ echo 'mkdir -p /var/lock/httpd' >> /root/run_apache.sh && \
+ echo '/usr/sbin/httpd -D FOREGROUND' >> /root/run_apache.sh && \
+ chmod 755 /root/run_apache.sh
+
+EXPOSE 80
+
+CMD /root/run_apache.sh

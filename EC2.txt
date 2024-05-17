@@ -1,0 +1,57 @@
+
+### 1. Create a Windows EC2 Instance and Connect Remotely
+
+#### a. Launching the Instance:
+1. **Login to AWS Management Console** and navigate to the EC2 Dashboard.
+2. Click **Launch Instance**.
+3. Select a **Windows Server AMI** (Amazon Machine Image), e.g., Windows Server 2019 Base.
+4. Choose **t2.micro** for the instance type.
+5. Configure instance details as required, then click **Next** until you reach the **Configure Security Group** step.
+6. Add a rule to allow RDP (Remote Desktop Protocol) traffic on port 3389 from your IP address for security.
+7. Review and launch the instance by selecting an existing key pair or creating a new one. **Download the key pair** if it’s new, as you’ll need this to decode the initial password.
+
+#### b. Connecting to the Instance:
+1. Once the instance is running, select it in the console.
+2. Click on **Connect** at the top, and then go to the RDP client tab.
+3. Download the remote desktop file and also get the password by using your key pair file.
+4. Use a Remote Desktop client like Microsoft Remote Desktop to connect to the instance using the downloaded RDP file and obtained password.
+
+### 2. Create and Attach an EBS Volume and Make a Partition
+
+#### a. Creating and Attaching the EBS Volume:
+1. In the EC2 Dashboard, go to the **Volumes** section under Elastic Block Store.
+2. Click **Create Volume**, choose General Purpose SSD (gp2) or gp3, set the size to 5 GB, and create the volume.
+3. Once created, select the volume and click on **Actions** > **Attach Volume**.
+4. Select your Windows EC2 instance to attach it to.
+
+#### b. Partitioning the EBS Volume:
+1. On your Windows instance, open the Disk Management tool.
+2. Initialize the new disk (if required) and create a new simple volume.
+3. Format the new volume and assign a drive letter.
+
+### 3. Create Files, Folders and Take a Snapshot
+
+1. Create files and folders on the new EBS volume using File Explorer in Windows.
+2. To take a snapshot, go back to the AWS Management Console, under **Elastic Block Store** > **Volumes**, select the volume.
+3. Click on **Actions** > **Create Snapshot**, provide a description, and create it.
+
+### 4. Create a Linux EC2 Instance and Connect Remotely
+
+Repeat the above steps for creating an instance, but:
+- Choose a Linux AMI like Amazon Linux 2.
+- For remote access, you will use SSH instead of RDP. Use an SSH client like PuTTY or Terminal with the key pair.
+
+### 5. Install HTTPD, Start, Enable Service, and Host a Static Website
+
+1. Connect to your Linux instance using SSH.
+2. Run `sudo yum update` and then `sudo yum install -y httpd`.
+3. Start the httpd service with `sudo systemctl start httpd` and enable it on boot with `sudo systemctl enable httpd`.
+4. Create a simple HTML file in `/var/www/html` (this is the default directory for Apache on Amazon Linux).
+5. Test by accessing your instance's public IP or DNS name in a web browser.
+
+### 6. Create an AMI and Launch a New Instance
+
+1. Go to the EC2 console, select your instance.
+2. In the Actions menu, choose Image and templates >Create image.
+3. Enter the details for the AMI and create it.
+4. Once the AMI is available, you can launch new instances from this AMI following the standard instance creation process.
